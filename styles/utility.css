@@ -34,3 +34,33 @@
 .text-sm {
   font: var(--text-sm);
 }
+
+@media screen and (max-width: 1280px) {
+  section.grid-flow-col {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  article.gap-16.grid-flow-col {
+    align-items: center;
+  }
+
+  article.gap-16 div:last-child {
+    order: -1;
+    justify-content: center;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .gap-32 article.gap-16 div:first-child {
+    order: -1;
+  }
+}

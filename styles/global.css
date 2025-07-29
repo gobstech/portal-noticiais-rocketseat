@@ -73,3 +73,14 @@ main {
   color: var(--text-color-primary);
   box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
 }
+
+@media screen and (max-width: 1280px) {
+  main.container.grid {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "featured featured"
+      "weekly weekly"
+      "ai ai"
+      "aside aside";
+  }
+}
